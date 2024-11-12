@@ -61,6 +61,8 @@ def get_scores(file_name):
 
     leaderboard_file.close()
 
+
+
     # TODO 7: return the scores in place of the empty list
     return scores
 
