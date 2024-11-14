@@ -136,9 +136,9 @@ def draw_leaderboard(high_scorer, leader_names, leader_scores, turtle_object, pl
     turtle_object.pendown()
 
     # TODO 15: Display a gold/silver/bronze message if player earned a gold/silver/or bronze medal; display nothing if no medal
+
     if (player_score >= gold_score):
         turtle_object.write("You got gold!", font=font_setup)
-
     elif (player_score >= silver_score and player_score < gold_score):
         turtle_object.write("You got silver!", font=font_setup)
     elif (player_score >= bronze_score and player_score < silver_score):
