@@ -19,12 +19,12 @@ number_of_apples = len(letters)
 # given a turtle, set that turtle to be shaped by the image file
 def draw_apple(apple):
   apple.shape(apple_image)
-  wn.update()
   apple.showturtle()
   apple.penup()
   apple.color("blue")
   apple.write("A", font=("Arial", 30, "bold"))
   apple.goto(apple_letter_x_offset, apple_letter_y_offset)
+  wn.update()
 def drop_apple():
   apple.penup()
   apple.clear()
@@ -42,8 +42,8 @@ def reset_apple(apple):
     newy = rand.randint(-10,30)
     new_letter = rand.randint(0,len(letters))
     apple.goto(newx, newy)
-    apple.letters.append(str(new_letter))
-    draw_apple(apple, letters.pop(new_letter))
+    apple_letters.append(str(new_letter))
+    draw_apple(apple)
 
 
 
