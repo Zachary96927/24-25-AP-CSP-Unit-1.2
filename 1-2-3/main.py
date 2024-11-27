@@ -43,7 +43,7 @@ def reset_apple(apple):
     new_letter = rand.randint(0,len(letters))
     apple.goto(newx, newy)
     apple_letters.append(str(new_letter))
-    draw_apple(apple)
+
 
 
 
