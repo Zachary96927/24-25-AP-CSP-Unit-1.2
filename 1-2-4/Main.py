@@ -56,30 +56,34 @@ wall_color = "black"
 wall_length = 15
 maze_painter.pencolor(wall_color)
 maze_painter.hideturtle()
-maze_painter.speed(50)
+maze_painter.speed(10)
+maze_painter.pensize(2)
 def draw_barrier():
     maze_painter.right(90)
-    maze_painter.forward(path_width)
-    maze_painter.backward(path_width)
+    maze_painter.forward(path_width*2)
+    maze_painter.backward(path_width*2)
     maze_painter.left(90)
+
+door = rnd.randint(path_width,(wall_length - path_width))
+barrier = rnd.randint(path_width*2,(wall_length - path_width*2))
+
 #repeat
 for wall in range(num_of_walls):
     #Draw line
     maze_painter.forward(path_width)
-    #turn left
-    maze_painter.left(90)
-    #increment
-    wall_length += path_width
     #make door
-    maze_painter.forward(wall_length/3)
     maze_painter.penup()
     maze_painter.forward(path_width)
     maze_painter.pendown()
+    draw_barrier()
     maze_painter.forward(wall_length-path_width-(wall_length/3))
-    maze_painter.forward(wall_length)
+    # turn left
+    maze_painter.left(rnd.randint(90, 90))
+
+    #increment
+    wall_length += path_width
     #draw barrier
-    if (wall > 5):
-        draw_barrier()
+
 
 
 
