@@ -50,7 +50,7 @@ import random as rnd
 wn = trtl.Screen()
 maze_painter = trtl.Turtle()
 
-num_of_walls = 25
+num_of_walls = 21
 path_width = 15
 wall_color = "black"
 wall_length = 15
@@ -59,26 +59,30 @@ maze_painter.hideturtle()
 maze_painter.speed(10)
 maze_painter.pensize(2)
 def draw_barrier():
+    barrier = rnd.randint(5,5)
+
+    maze_painter.forward(barrier)
     maze_painter.right(90)
     maze_painter.forward(path_width*2)
     maze_painter.backward(path_width*2)
     maze_painter.left(90)
 
-door = rnd.randint(path_width,(wall_length - path_width))
-barrier = rnd.randint(path_width*2,(wall_length - path_width*2))
-
 #repeat
 for wall in range(num_of_walls):
+    door = rnd.randint(5, (wall_length - 5))
+
     #Draw line
-    maze_painter.forward(path_width)
+    maze_painter.forward(door)
     #make door
     maze_painter.penup()
     maze_painter.forward(path_width)
     maze_painter.pendown()
-    draw_barrier()
-    maze_painter.forward(wall_length-path_width-(wall_length/3))
+    if wall > 5:
+        draw_barrier()
+    maze_painter.forward(wall_length-path_width- door)
+    maze_painter.forward(wall_length)
     # turn left
-    maze_painter.left(rnd.randint(90, 90))
+    maze_painter.left(90)
 
     #increment
     wall_length += path_width
