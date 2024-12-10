@@ -161,7 +161,6 @@ def check_apple_y():
 def check_apple_z():
   if"Z" in apple_letters:
     drop_apple()
-
 #-----function calls-----
 
 draw_apple(apple)

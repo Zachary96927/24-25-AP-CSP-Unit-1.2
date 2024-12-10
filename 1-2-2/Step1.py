@@ -98,7 +98,6 @@ def change_position():
     spot.showturtle()
     spot.pendown()
 
-
 # starting the game
 def start_game():
     spot.onclick(spot_clicked)
