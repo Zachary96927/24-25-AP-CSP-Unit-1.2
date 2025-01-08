@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/24-25-AP-CSP-Unit-1.2.iml" filepath="$PROJECT_DIR$/.idea/24-25-AP-CSP-Unit-1.2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../25MauroGeraghty/.idea/25MauroGeraghty.iml" filepath="$PROJECT_DIR$/../25MauroGeraghty/.idea/25MauroGeraghty.iml" />
     </modules>
   </component>
 </project>
